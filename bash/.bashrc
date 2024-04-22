@@ -129,7 +129,7 @@ export PATH=$PATH:$HOME/Android/sdk/build-tools/34.0.0/
 export PATH=$PATH:$HOME/Android/sdk/emulator/bin64/
 export PATH=$PATH:$HOME/Android/sdk/emulator/
 export ANDROID_HOME=$HOME/Android/sdk/
-export PATH="/home/gabriel/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="~/.local/share/solana/install/active_release/bin:$PATH"
 
 GOPATH=$HOME/go
 
