@@ -153,7 +153,7 @@ require('lazy').setup({
 
   { 'AndreM222/copilot-lualine' },
 
-  { 'tpope/vim-obsession', opts = {} },
+  { 'tpope/vim-obsession',      opts = {} },
 
   {
     'utilyre/barbecue.nvim',
@@ -211,7 +211,7 @@ require('lazy').setup({
 
   { 'petertriho/nvim-scrollbar', opts = {} },
 
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',     opts = {} },
 
   {
     'm4xshen/hardtime.nvim',
@@ -276,16 +276,13 @@ require('lazy').setup({
       'nvim-lua/plenary.nvim',
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-
         build = 'make',
-
         cond = function()
           return vim.fn.executable 'make' == 1
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
     },
     config = function()
       require('telescope').setup {
