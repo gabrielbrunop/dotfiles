@@ -294,13 +294,12 @@ require('lazy').setup({
         defaults = {
           file_ignore_patterns = {
             'node_modules',
-            'vendor',
-            'target',
-            'dist',
-            'build',
-            'out',
-            'tmp',
-            '.gip',
+            './vendor/',
+            './target/',
+            './dist/',
+            './build/',
+            './out/',
+            './tmp/',
           },
         }
       }
@@ -448,6 +447,7 @@ require('lazy').setup({
         end,
         formatters_by_ft = {
           lua = { 'stylua' },
+          rust = { 'rustfmt' },
           javascript = { { "prettierd", "prettier" } },
           typescript = { { "prettierd", "prettier" } },
           javascriptreact = { { "prettierd", "prettier" } },
@@ -482,15 +482,12 @@ require('lazy').setup({
           return 'make install_jsregexp'
         end)(),
         dependencies = {
-          -- `friendly-snippets` contains a variety of premade snippets.
-          --    See the README about individual language/framework/plugin snippets:
-          --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+          {
+            'rafamadriz/friendly-snippets',
+            config = function()
+              require('luasnip.loaders.from_vscode').lazy_load()
+            end,
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
@@ -559,6 +556,7 @@ require('lazy').setup({
         'markdown',
         'vim',
         'vimdoc',
+        'rust',
         'javascript',
         'typescript',
         'html',
